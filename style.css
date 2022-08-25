@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #869aff;
+}
+
+form {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: -2px 3px 20px 1px rgb(2 4 2 / 51%);
+
+}
+
+form h3 {
+    color: #000000;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+    border: 0;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 20px;
+    background: #f5f5f5;
+    font-size: 16px;
+    resize: none;
+}
+
+#btn {
+    padding: 15px;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 30px;
+    background: #f74e5c;
+    color: #fff;
+    width: 140px;
+    margin: 20px auto 0;
+}
+
+.temp {
+    display: initial;
+}
+
+.temp1 {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#user_name {
+    text-transform: capitalize;
+}
+
+
+.context {
+    width: 100%;
+    justify-content: center;
+    margin-left: 34%;
+    z-index: 999;
+}
+
+.head {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 100%;
+    font-size: x-large;
+    font-weight: 800px;
+}
+
+.counter {
+    width: 100%;
+    text-align: right;
+    margin-top: 15px;
+}
+
+
+.area {
+    background: #869aff;
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    width: 100%;
+    height: 100vh;
+
+
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background-color: #ffff00;
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+
+}
+
+.circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 60%;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 60%;
+    }
+
+}
+
+:root {
+    --circle-width: 250px;
+    --circle-height: 250px;
+    --tick-width: calc(var(--circle-width)*0.56);
+    --tick-height: calc(var(--circle-height)*0.24);
+    --tick-thickness: calc(var(--tick-width)*0.1);
+    --circle-color: transparent;           
+    --tick-first-color: #5e81b3;    
+    --tick-second-color: #e1edff;   
+    --tick-third-color: #c3dbff;    
+    --tick-final-color: #ffff;    
+}
+
+
+
+.circle {
+    background-color: var(--circle-color);
+    width: var(--circle-width);
+    height: var(--circle-height);
+    left: calc(50% - var(--circle-width) / 2);
+    top: calc(50% - var(--circle-height) / 2);
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: var(--tick-thickness) solid var(--circle-border-color);
+}
+
+.tick {
+    display: inline-block;
+    width: 56%;
+    height: 24%;
+    border-left: var(--tick-thickness) solid var(--tick-final-color);
+    border-bottom: var(--tick-thickness) solid var(--tick-final-color);
+    position: absolute;
+    margin: 0 auto;
+    left: calc(var(--circle-width)*0.15);
+    top: calc(var(--circle-height)/2 - var(--tick-height));
+    transform: rotate(-40deg);
+    transform-origin: calc(var(--tick-width)*0.57) calc(var(--tick-height)/2);
+    animation: tick-animation 1s;
+}
+
+@keyframes tick-animation {
+    0% {
+        height: 0;
+        width: 0;
+        border-left-color: var(--tick-first-color);
+    }
+    50% {
+        width: 0;
+        height: var(--tick-height);
+        border-left-color: var(--tick-second-color);
+        border-bottom-color: var(--tick-first-color);
+    }
+    75% {
+        border-left-color: var(--tick-third-color);
+        border-bottom-color: var(--tick-second-color);
+    }
+    90% {
+        border-bottom-color: var(--tick-third-color);
+    }
+    100% {
+        width: var(--tick-width);
+        border-color: var(--tick-final-color);
+    }
+}
+

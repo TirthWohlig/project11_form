@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="context">
+        <section id="two">
+            <form onsubmit="return false">
+                <h3>Hi, <span id="user_name"></span> Please enter your phone number</h3>
+
+                <input type="text" max="10" id="userNo" required placeholder="Phone number">
+
+                <p class="counter" id="result"></p>
+                <div class="temp">
+                    <a onclick="history.back()" id="btn" style="text-decoration:none;text-align:center"> &larr;
+                    </a>
+                    <input id="btn" type="submit" onclick="userno()" value="Next">
+                </div>
+
+            </form>
+        </section>
+    </div>
+
+
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+
+
+    <body>
+        <script>
+            function userno() {
+                var phone = document.getElementById("userNo").value;
+                localStorage.setItem("phone", phone);
+
+                if (phone == "") {
+                    alert("Please enter your phone number");
+                }
+
+                 
+
+                else {
+                    window.location.href = "password.html";
+                }
+            }
+            document.getElementById("user_name").innerHTML = localStorage.getItem("name");
+
+            
+        </script>
+
+</html>

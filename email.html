@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="context">
+        <section id="two">
+            <form onsubmit="return false">
+                <h3>Hi, <span id="user_name"></span> Please enter your email address</h3>
+                <input type="email" id="userId" required placeholder="Email id">
+                <div class="temp">
+                    <a onclick="history.back()" id="btn" style="text-decoration:none;text-align:center"> &larr;
+                    </a>
+                    <input id="btn" type="submit" onclick="userid()" value="Next">
+                </div>
+
+            </form>
+        </section>
+    </div>
+
+
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+
+
+
+    <body>
+        <script>
+            function userid() {
+                var email = document.getElementById("userId").value;
+                localStorage.setItem("email", email);
+
+                if (email == "") {
+                    alert("Please enter your email");
+                }
+
+                else {
+                    window.location.href = "number.html";
+                }
+            }
+            document.getElementById("user_name").innerHTML = localStorage.getItem("name")
+
+           
+           
+
+        </script>
+
+</html>

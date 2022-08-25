@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="context">
+        <form>
+            <h3>Hey <span id=user_name></span> Please check our details.</h3>
+            <label for="text">Name :</label>
+            <input type="text" id="userInput" disabled required placeholder="Name">
+            <label for="email">Email Id :</label>
+            <input type="email" id="userId" disabled required placeholder="Email id">
+            <label for="number">Phone Number :</label>
+            <input type="number" id="userNo" disabled required placeholder="Phone number">
+            <label for="text">Password :</label>
+            <input type="text" name="password" disabled id="password" placeholder="Password" required>
+            <div class="temp">
+                <a onclick="history.go(-4)" id="btn" style="text-decoration:none;text-align:center"> Do changes
+                </a>
+                <input type="button" id="btn" onclick="sucess()" value="All ok!" />
+            </div>
+        </form>
+    </div>
+
+
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+</body>
+<script>
+    document.getElementById("userInput").value = localStorage.getItem("name");
+    document.getElementById("userId").value = localStorage.getItem("email");
+    document.getElementById("userNo").value = localStorage.getItem("phone");
+    document.getElementById("password").value = localStorage.getItem("Password");
+    document.getElementById("user_name").innerHTML = localStorage.getItem("name");
+
+    function sucess() {
+        window.location.href = "sucess.html";
+    }
+
+</script>
+
+</html>

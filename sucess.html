@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="context">
+        <h3 class="head"> <span id="user_name"></span> ,You have signed in <span class="spn"> Sucessfully </span> </h3>
+    </div>
+
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="circle">
+        <div class="tick"></div>
+    </div>
+</body>
+<script>
+    var name = localStorage.getItem("name");
+    document.getElementById("user_name").innerHTML = name;
+</script>
+
+</html>
